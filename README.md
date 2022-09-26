@@ -2,18 +2,42 @@
 
 Prints the hexdump of a selected file
 
+# Installation
+
+`pip install hexdumper`
+
 # Usage
 
-`main.py [-h] --path PATH`
+**From command line:**
+
+`python -m hexdumper [-h] --path PATH [--noHash]`
 
 | Option | Short | Type | Default | Description |
 |---|---|---|---|---|
 |--path | -p | String | - | Path to file which shall be dumped |
+|--noHash | -nH | Flag | False | Disable hashing e.g. for big files |
+
+**Programmatically:**
+
+```python
+from hexdumper.Hexdump import Hexdump
+
+# Prints the hexdump of test.txt
+h1 = Hexdump("test.txt")
+h1.print()
+
+# Prints the hexdump of the given hex values
+h2 = Hexdump("")
+h2.printNoOfBytes(["00", "0F", "0A", "AC", "34"])
+
+```
 
 
 # Example
 
-`python main.py -p "path/to/file/test.txt" > result.txt`
+
+
+`python -m hexdumper -p "path/to/file/test.txt" > result.txt`
 
 You can find the following result [here](./example/example.txt):
 
