@@ -1,5 +1,6 @@
 env/
 dist/
+data/
 build/
 *-setup-*
 **/__pycache__
