@@ -5,10 +5,10 @@ with open("README.md", "r") as r:
 
 setup(
     name="hexdumper",            
-    version="2.0.1",
+    version="2.0.2",
     author="5f0",
     url="https://github.com/5f0ne/hexdump",
-    description="Prints the hexdump of a selected file",
+    description="Creates the hexdump of a selected file",
     classifiers=[
         "Operating System :: OS Independent ",
         "Programming Language :: Python :: 3 ",
@@ -20,8 +20,8 @@ setup(
     package_dir={"": "src"},
     packages=["hexdumper"],
     install_requires=[
-        "hash_calc",
-        "hexlib==2.0.1"
+        "hash_calc==1.1.0",
+        "hexlib==2.0.3"
     ],
     entry_points={
         "console_scripts": [

@@ -3,5 +3,6 @@ dist/
 data/
 build/
 *-setup-*
+result.txt
 **/__pycache__
 **/*.egg-info/

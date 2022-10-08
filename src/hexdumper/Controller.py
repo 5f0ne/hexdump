@@ -33,6 +33,29 @@ class Controller():
         print("######################################################################################################################")
         print("")
 
+
+    def writeFileHeader(self, outfile, path, isOffset=False, offset = 0, noOfBytes = 0):
+        with open(outfile, "w") as f:
+            f.write("         Datetime: " + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + "\n")
+            f.write("\n")
+            f.write("Investigated File: " + path + "\n")
+            f.write("         MD5 Hash: " + self.md5 + "\n")
+            f.write("      SHA256 Hash: " + self.sha256 + "\n")
+            f.write("\n")
+
+            if(isOffset):
+                e = open(path,"rb")
+                e.seek(offset, 0)
+                b = e.read(noOfBytes)
+                e.close()
+                h = HashCalc.fromBytes(b)
+                f.write("           Offset: " + str(offset) + "\n")
+                f.write("     No. of bytes: " + str(noOfBytes) + "\n")
+                f.write("         MD5 Hash: " + h.md5 + "\n")
+                f.write("      SHA256 Hash: " + h.sha256 + "\n")
+                f.write("\n")
+
+
     def printExecutionTime(self):
         end = time.time()
         print("")
