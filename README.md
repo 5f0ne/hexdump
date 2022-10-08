@@ -33,7 +33,7 @@
 ```
          Datetime: 01/01/1970 10:11:12
 
-Investigated File: result.txt
+Investigated File: .\data\testfile
          MD5 Hash: 57f34e4aacacbd209eaf6990f16d0289
       SHA256 Hash: 162eb0e1083e50dd7832729b6b96cda7ba9ca76d21c8b46f706b204d3d8b8c0f
 
@@ -65,9 +65,9 @@ Investigated File: result.txt
 **result.txt:**
 
 ```
-         Datetime: 08/10/2022 23:13:12
+         Datetime: 01/01/1970 10:11:13
 
-Investigated File: result.txt
+Investigated File: .\data\testfile
          MD5 Hash: 57f34e4aacacbd209eaf6990f16d0289
       SHA256 Hash: 162eb0e1083e50dd7832729b6b96cda7ba9ca76d21c8b46f706b204d3d8b8c0f
 
